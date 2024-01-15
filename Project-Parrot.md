@@ -1,7 +1,7 @@
 <h1 align="center">
     Project Parrot 🦜
 </h1>
-<b> An elegant solution for annotation in Google Sheets.</b> test14
+<b> An elegant solution for annotation in Google Sheets.</b>
 <h2>Annotation Workflow ✏️</h2>
 <b>To get started annotating in Parrot, follow these steps:</b>
 <ol>
@@ -57,7 +57,12 @@
 </li>
 <li> The Setup Dashboard will provide input fields for your <code>Project Name</code>, <code>Deel Code</code>, and <code>Instructions Link</code>. The provided Project Name and Deel code will appear on the home page of the finalized interface and the instructions link will be connected to the <code>Instructions</code> button within tasks and on the home page.</li>
 <li>Within the Setup Dashboard, a horizontal list of all columns present in the <code>data</code> will be displayed.</li>
-<li> You must choose a column type from the table below for each of these columns. <ol><li>Selecting <code>Mandatory</code> will result in the interface enforcing that a value must be provided within that column before a task can be submitted.</li> <li>Selecting <code>Rated</code> indicates that the column is being used with the <code>Better</code> and <code>Worse</code> column types, <b>this is not the same as a regular 1/5 rating dropdown</b>.</li> <li>There must only be one instance of each of the following column types: <code>Annotator</code>,  <code>Row ID</code>,  <code>Task ID</code>,  <code>QA Annotator</code>, and <code>QA</code>.</li></ol></li>
+<li> You must choose a column type from the table below for each of these columns. <ul> <li>There must only be one instance of each of the following column types:   <code>Annotator</code>,  <code>Row ID</code>,  <code>QA Annotator</code>, <code>QA</code> and <code>Task ID</code>.</li><li>All of the column types listed above with the exception of <code>Task ID</code> are necessary for the interface to function. If you do not configure at least one column for each of the column types listed above, the dashboard will automatically create additional columns of those types for you on submission.</li></ul></li>
+
+<li>Select Mandatory and Rated where applicable.
+<ul><li>Selecting Mandatory will enforce user input for the corresponding input field.</li><li>Selecting Rated will allow the user to provide a rating in addition to the specified input type.</li></ul></li>
+
+<li>Optionally enter Additional Instructions which provide extra context to the annotator via tooltips in the interface.</li>
 
 <li>Click on <code>Configure</code> to submit your configuration.</li>
 
@@ -78,7 +83,8 @@
 | Rewrite      | The input field for re-writing pre-existing information, will appear on the <code>right-hand</code> side of the interface.                                                                                                                 |
 | Better       | Used in tandem with <code>Worse and Rating</code>, indicates which column will store the better completion of all rated responses within the interface. The **higher** rating value will indicate the **better** completion.           |
 | Worse        | Used in tandem with <code>Better and Rating</code>, indicates which column will store the worst completion of all rated responses within the interface. The **lower** rating value will indicate the **worse** completion.             |
-| Checkbox     | Checkbox column types are used when a checkbox data validation is present in the corresponding column. Checkboxes are sorted by groups, groups must be manually created and checkbox column types must be assigned to these groups. |
+| Checkbox     | Checkbox column types are used when a checkbox data validation is present in the corresponding column. Checkboxes are sorted by <code>Checkbox Groups</code>, allowing for the bundling of related data within the UI. |
+| Checkbox Group     | A special column type which represents and labels a grouping of checkboxes. **Every checkbox** must have an associated checkbox group.  |
 | Hidden       | Indicates a column that is meant to be hidden from view in the interface. **If a column is not set to another type, this should be the used type.**                                                                                    |
 | Dropdown     | Used when a dropdown data validation is present in the corresponding column. **Dropdowns are single choice.** The dropdown within the interface will directly pull its choices from the data validation of its column.                 |
 | QA           | Column for storing QA comments per row.                                                                                                                                                                                                 |
