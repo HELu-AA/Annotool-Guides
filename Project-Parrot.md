@@ -48,7 +48,7 @@
 > Attempting to use the Setup Dashboard from a browser signed into multiple Google accounts **may** cause issues for some users when trying to submit a configuration. The error will result in the user being stuck on a loading screen after pressing the <code>Configure</code> button. If this occurs, the recommended path of action is to try submitting the configuration from an Incognito/Private tab where all other accounts are signed out by default. If the issue persists please contact a project maintainer.  
 
 <ol>
-<li>Create a copy of the Parrot Template spreadsheet provided by a project maintainer by going to the <code>File</code> dropdown and clicking <code>Make a copy</code>.</li>
+<li>Create a copy of the [Parrot Template spreadsheet](https://docs.google.com/spreadsheets/d/1vzQkOpuUM0fbB-EgmAaHNUAzITxmFbie9MoUCFZ1e5Q/edit#gid=0) by going to the <code>File</code> dropdown and clicking <code>Make a copy</code>.</li>
 <li>Copy and paste the entirety of your main task spreadsheet into the <code>data</code> tab of the copied template. The <code>data</code> tab should now contain all of the information needed to carry out the task. This will differ depending on the task at hand but an example would be the <code>data</code> tab containing individual columns for prompts, responses, empty columns for completions, etc. </li>
 <li>Continuing forward within your copied template, set the sheet to editable and set General Access [- Cohere FTE+CW] to Editor.</li>
 <li>Click the <code>Parrot</code> button in the toolbar followed by the <code>Configure Sheets Interface</code> button to launch the Setup Dashboard.  
